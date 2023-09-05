@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import withCounter from './withCounter';
+import { ThemeContext } from './App';
 
 function ClickCounter({ count, incrementCount }) {
+  const theme = useContext(ThemeContext);
+  console.log(theme);
+
   return (
     <>
       <h4>Click Counter</h4>

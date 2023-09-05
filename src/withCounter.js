@@ -7,7 +7,6 @@ const withCounter = (OriginalComponent, value) => {
     return (
       <OriginalComponent
         count={count}
-        name="Ish"
         incrementCount={() => setCount((prevCount) => prevCount + value)}
       />
     );
