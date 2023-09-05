@@ -1,7 +1,7 @@
 import React from 'react';
 
 const withCounter = (OriginalComponent, value) => {
-  function NewComponent(props) {
+  function NewComponent() {
     const [count, setCount] = React.useState(10);
 
     return (
