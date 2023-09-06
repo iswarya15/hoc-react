@@ -1,5 +1,8 @@
 import React from 'react';
-import withCounter from './withCounter'
+import {PropTypes} from "prop-types";
+
+import withCounter from './withCounter';
+
 
 export default function HoverCounter({count, incrementCount}) {
 
@@ -10,6 +13,11 @@ export default function HoverCounter({count, incrementCount}) {
       <p style={{ fontSize: count }}>Count : {count}</p>
     </>
   );
+}
+
+HoverCounter.propTypes = {
+  count: PropTypes.number.isRequired,
+  incrementCount: PropTypes.func.isRequired
 }
 
 export default withCounter(HoverCounter, 5);

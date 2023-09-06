@@ -1,4 +1,5 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext } from 'react';
+import { createPortal } from 'react-dom';
 import './style.css';
 
 import ClickCounter from './ClickCounter';
@@ -13,7 +14,9 @@ export default function App() {
         <h1>Hello!</h1>
         <p>Start editing to see some magic happen :)</p>
         <ClickCounter />
-        <HoverCounter />
+        <HoverCounter>{/*<ClickCounter /> */}</HoverCounter>
+
+        {createPortal(<p>created thru Portal</p>, document.body)}
       </div>
     </ThemeContext.Provider>
   );
